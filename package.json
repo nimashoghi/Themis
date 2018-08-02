@@ -1,0 +1,19 @@
+{
+    "name": "Themis",
+    "version": "1.0.0",
+    "description": "AsyncStorage replacement for React Native during development",
+    "main": "lib/index.js",
+    "author": "Nima Shoghi <nima@nima.sh>",
+    "license": "MIT",
+    "scripts": {
+        "build": "babel src --out-dir lib"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.0.0-beta.55",
+        "@babel/core": "^7.0.0-beta.55",
+        "@babel/preset-env": "^7.0.0-beta.55"
+    },
+    "dependencies": {
+        "@babel/polyfill": "^7.0.0-beta.55"
+    }
+}
