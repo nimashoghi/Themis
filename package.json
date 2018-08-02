@@ -6,7 +6,8 @@
     "author": "Nima Shoghi <nima@nima.sh>",
     "license": "MIT",
     "scripts": {
-        "build": "babel src --out-dir lib"
+        "build": "babel src --out-dir lib --source-maps",
+        "start": "node lib/index.js"
     },
     "devDependencies": {
         "@babel/cli": "^7.0.0-beta.55",
@@ -17,6 +18,7 @@
     },
     "dependencies": {
         "@babel/polyfill": "^7.0.0-beta.55",
-        "hapi": "^17.5.3"
+        "hapi": "^17.5.3",
+        "jsonfile": "^4.0.0"
     }
 }

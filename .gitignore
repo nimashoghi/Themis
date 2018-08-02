@@ -74,3 +74,6 @@ typings/
 
 # Visual Studio Code configuration
 .vscode/
+
+# Compiled JavaScript
+lib/
