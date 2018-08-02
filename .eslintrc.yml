@@ -1,0 +1,26 @@
+env:
+  commonjs: true
+  es6: true
+extends: 'eslint:recommended'
+parserOptions:
+  ecmaFeatures:
+    classes: true
+  ecmaVersion: 2018
+  sourceType: module
+rules:
+  indent:
+    - error
+    - 4
+    - SwitchCase: 1
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - double
+  semi:
+    - error
+    - never
+  no-unused-vars:
+    - error
+    - argsIgnorePattern: "^_"

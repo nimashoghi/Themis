@@ -11,9 +11,12 @@
     "devDependencies": {
         "@babel/cli": "^7.0.0-beta.55",
         "@babel/core": "^7.0.0-beta.55",
-        "@babel/preset-env": "^7.0.0-beta.55"
+        "@babel/preset-env": "^7.0.0-beta.55",
+        "eslint": "^5.2.0",
+        "prettier": "^1.14.0"
     },
     "dependencies": {
-        "@babel/polyfill": "^7.0.0-beta.55"
+        "@babel/polyfill": "^7.0.0-beta.55",
+        "hapi": "^17.5.3"
     }
 }
