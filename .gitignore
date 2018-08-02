@@ -78,4 +78,5 @@ typings/
 # Compiled JavaScript
 lib/
 
-state.json
+# State folder
+state/

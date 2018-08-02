@@ -1,10 +1,14 @@
-import {existsSync} from "fs"
+import {existsSync, mkdirSync} from "fs"
 import {Server} from "hapi"
 import {readFileSync, writeFileSync} from "jsonfile"
 
-if (!existsSync("./state.json")) {
+if (!existsSync("./state")) {
+    mkdirSync("./state")
+}
+
+if (!existsSync("./state/state.json")) {
     writeFileSync(
-        "./state.json",
+        "./state/state.json",
         {},
         {
             spaces: 4
@@ -14,10 +18,10 @@ if (!existsSync("./state.json")) {
 
 class StateWrapper {
     static get state() {
-        return readFileSync("./state.json")
+        return readFileSync("./state/state.json")
     }
     static set state(value) {
-        writeFileSync("./state.json", value, {
+        writeFileSync("./state/state.json", value, {
             spaces: 4
         })
     }
