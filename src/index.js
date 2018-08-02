@@ -46,15 +46,11 @@ server.route({
     method: "POST",
     path: "/",
     handler: request => {
-        if (
-            !Array.isArray(request.payload) ||
-            !request.payload.every(o => typeof o === "object")
-        ) {
-            return "Failure: Invalid payload"
-        }
         StateWrapper.state = Object.assign(
             StateWrapper.state,
-            ...request.payload
+            ...(Array.isArray(request.payload)
+                ? request.payload
+                : [request.payload])
         )
         return "Success"
     }
