@@ -1,6 +1,6 @@
 {
     "name": "Themis",
-    "version": "1.0.0",
+    "version": "1.0.0-beta0",
     "description": "Visualized AsyncStorage replacement for React Native during development",
     "main": "lib/index.js",
     "author": "Nima Shoghi <nima@nima.sh>",
