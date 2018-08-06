@@ -74,7 +74,7 @@ TODO
 
 -   **Nima Shoghi** - _Original Author_ - [nimashoghi](https://github.com/nimashoghi)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/nimashoghi/Themis/contributors) who participated in this project.
 
 ## License
 
