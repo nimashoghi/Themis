@@ -22,7 +22,8 @@
         "build-viewer": "webpack",
         "run-viewer": "http-server",
         "start-viewer": "npm-run-all --serial build-viewer run-viewer",
-        "start": "npm-run-all --parallel start-server start-viewer"
+        "build-start": "npm-run-all --parallel start-server start-viewer",
+        "start": "npm-run-all --parallel run-server run-viewer"
     },
     "devDependencies": {
         "@babel/cli": "^7.0.0-beta.55",
