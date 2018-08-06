@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/cli.js"],"names":["require","exec"],"mappings":"AAAA;;;AAEAA,OAAO,CAAC,SAAD,CAAP,CAAmBC,IAAnB,CAAwB,eAAxB","sourcesContent":["#!/usr/bin/env node\n\nrequire(\"shelljs\").exec(\"npm run start\")\n"],"file":"cli.js"}

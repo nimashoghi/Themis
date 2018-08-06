@@ -2,13 +2,20 @@ import {existsSync, mkdirSync} from "fs"
 import {Server} from "hapi"
 import {readFileSync, writeFileSync} from "jsonfile"
 
+import {config} from "../package.json"
+const {
+    serverHost = "0.0.0.0",
+    serverPort = 3283,
+    stateFileName = "state.json"
+} = config
+
 if (!existsSync("./state")) {
     mkdirSync("./state")
 }
 
-if (!existsSync("./state/state.json")) {
+if (!existsSync(`./state/${stateFileName}`)) {
     writeFileSync(
-        "./state/state.json",
+        `./state/${stateFileName}`,
         {},
         {
             spaces: 4
@@ -18,18 +25,18 @@ if (!existsSync("./state/state.json")) {
 
 class StateWrapper {
     static get state() {
-        return readFileSync("./state/state.json")
+        return readFileSync(`./state/${stateFileName}`)
     }
     static set state(value) {
-        writeFileSync("./state/state.json", value, {
+        writeFileSync(`./state/${stateFileName}`, value, {
             spaces: 4
         })
     }
 }
 
 const server = new Server({
-    host: "0.0.0.0",
-    port: 3001,
+    host: serverHost,
+    port: serverPort,
     routes: {
         cors: {
             origin: "ignore"
@@ -79,7 +86,7 @@ server.route({
 async function startServer() {
     try {
         await server.start()
-        console.log("Server started on port 3001")
+        console.log(`Server started on port ${serverPort}`)
     } catch (e) {
         console.error(e)
     }
