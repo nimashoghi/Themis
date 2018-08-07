@@ -20,7 +20,7 @@
         "run-server": "node lib/server.js",
         "start-server": "npm-run-all --serial build-server run-server",
         "build-viewer": "webpack",
-        "run-viewer": "http-server",
+        "run-viewer": "http-server -p 3000",
         "start-viewer": "npm-run-all --serial build-viewer run-viewer",
         "build-start": "npm-run-all --parallel start-server start-viewer",
         "start": "npm-run-all --parallel run-server run-viewer"

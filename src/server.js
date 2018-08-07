@@ -77,9 +77,7 @@ server.route({
             }
         }
         StateWrapper.state = newState
-        return {
-            success: true
-        }
+        return newState
     }
 })
 
